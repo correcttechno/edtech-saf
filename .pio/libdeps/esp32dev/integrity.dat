@@ -1,4 +1,4 @@
-adafruit/Adafruit Unified Sensor@^1.1.14
-adafruit/DHT sensor library@^1.4.6
-lib\Adafruit_MPU6050-master
 lib\blynk-library-master
+adafruit/Adafruit Unified Sensor@^1.1.14
+lib\Adafruit_MPU6050-master
+adafruit/DHT sensor library @ ^1.4.4

@@ -3,24 +3,22 @@
 #include <DHT_U.h>
 #include <Arduino.h>
 
+#define DHTPIN A2
+#define DHTTYPE DHT11
 
-#define DHTPIN 33  
-#define DHTTYPE    DHT11   
-DHT_Unified dht(DHTPIN, DHTTYPE);
+DHT dht(DHTPIN, DHTTYPE);
 
-void BeginDHT(){
+void BeginDHT()
+{
     dht.begin();
-    
 }
 
-int getTemp(){
-    sensors_event_t event;
-    dht.temperature().getEvent(&event);
-    return event.temperature;
+float getTemp()
+{
+    return dht.readTemperature();
 }
 
-int getHum(){
-    sensors_event_t event;
-    dht.humidity().getEvent(&event);
-    return event.relative_humidity;
+float getHum()
+{
+    return dht.readHumidity();
 }
